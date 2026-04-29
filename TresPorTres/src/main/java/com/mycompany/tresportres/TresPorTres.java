@@ -100,8 +100,56 @@ public class TresPorTres {
                     }
                 }
                 JOptionPane.showMessageDialog(null,texto);
+                break;
             }
 
+            case 'g':{
+                int maior = Matriz[0][0];
+                for(int i = 0; i < 3 ; i++){
+                    for(int j = 0; j < 3; j++){
+                        if(Matriz[i][j] > maior){
+                            maior = Matriz[i][j];
+                        }
+                    }
+                }
+                JOptionPane.showMessageDialog(null,"O maior número da matriz é: " + maior);
+                break;
+            }
+            case 'h':{
+                int menor = Matriz[0][0];
+                for(int i = 0; i < 3 ; i++){
+                    for(int j = 0; j < 3; j++){
+                        if(Matriz[i][j] < menor){
+                            menor = Matriz[i][j];
+                        }
+                    }
+                }
+                JOptionPane.showMessageDialog(null,"O maior número da matriz é: " + menor);
+                break;
+            }
+            case 'i':{
+                int soma = 0;
+                for(int i = 0; i < 3; i++){
+                    for(int j = 0; j < 3; j++){
+                        if(i == j){
+                            soma += Matriz[i][j];
+                        }
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "A soma da diagonal principal: " + soma);
+                break;
+            }
+            case 'j':{
+                int soma = 0;
+                int j = 2;
+                for(int i = 0; i < 3; i++){
+                    soma += Matriz[j][i];
+                    j --;
+                }
+                JOptionPane.showMessageDialog(null, "A soma da diagonal secundária: " + soma);
+                break;
+            }
+            
         }
     }
 }
